@@ -1,0 +1,12 @@
+[Unit]
+Description=auth0 LDAP connector agent
+After=network.target
+
+[Service]
+ExecStart=/bin/node server.js
+WorkingDirectory=/opt/ad-ldap-connector
+Restart=always
+User=ad-ldap-connector
+
+[Install]
+WantedBy=multi-user.target
