@@ -7,6 +7,7 @@ ExecStart=/bin/node server.js
 WorkingDirectory=/opt/ad-ldap-connector
 Restart=always
 User=ad-ldap-connector
+StandardOutput=syslog
 
 [Install]
 WantedBy=multi-user.target
