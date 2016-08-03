@@ -13,7 +13,7 @@ chown ad-ldap-connector:ad-ldap-connector /var/log/ad-ldap-connector.log || {
 }
 
 echo "You will need to run:"
-echo "$ cd /opt/ad-ldap-connector && sudo -u node server.js"
+echo "$ cd /opt/ad-ldap-connector && sudo -u ad-ldap-connector node server.js"
 echo "Once manually the first time in order to setup the connector."
 echo "Configure /opt/ad-ldap-connector/config.json afterwards and run the usual systemd commands:"
 echo "$ systemctl start ad-ldap-connector"
