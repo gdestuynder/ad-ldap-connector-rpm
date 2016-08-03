@@ -10,7 +10,10 @@
 #If you change the PKGVER ensure the module list in npm_modules.sha256sum
 #To regenerate it: find ad-ldap-connector-2.28.0/node_modules/ -type f -exec sha256sum {} \; > npm_modules.sha256sum for example (you can also do this for single modules instead)
 
+#This is the ad-ldap-connector version
 PKGVER:=2.28.0
+#This is the packaging sub-release version
+PKGREL:=2
 PKGNAME:=ad-ldap-connector
 PKGPATH:=https://github.com/auth0/ad-ldap-connector/archive/
 PKGSHA256:=8a5fb7582737386000885a1d210632dc8a6fa0104e1d5f5efa5d1c69010ce4dc
@@ -38,6 +41,7 @@ fpm: extract npm_verify
 		--before-install pre-install.sh \
 		--config-files config.json \
 		--config-files environ \
+		--iteration $(PKGREL) \
 		-n $(PKGNAME) -v $(PKGVER) -C target
 
 npm_download: extract
