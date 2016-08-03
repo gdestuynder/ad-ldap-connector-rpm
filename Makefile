@@ -31,11 +31,13 @@ fpm: extract npm_verify
 	cp -vr $(PKGDIRNAME) target/opt/$(PKGNAME)
 	mkdir -p target/usr/lib/systemd/system
 	cp -v $(PKGNAME).service target/usr/lib/systemd/system
+	cp -v environ target/opt/$(PKGNAME)/
 	fpm -s dir -t rpm \
 		--rpm-user $(PKGNAME) --rpm-group $(PKGNAME) \
 		--rpm-digest sha256 \
 		--before-install pre-install.sh \
 		--config-files config.json \
+		--config-files environ \
 		-n $(PKGNAME) -v $(PKGVER) -C target
 
 npm_download: extract
