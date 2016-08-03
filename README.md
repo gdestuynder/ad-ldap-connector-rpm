@@ -22,8 +22,11 @@ To run it
 =========
 First time run requires you to run it interactively to fetch the auth0 ticket: 
   $ sudo -u ad-ldap-connector node server.js
+  
 You can then modify config.json and start the daemon:
+
   $ systemctl start ad-ldap-connector
+  
   $ systemctl enable ad-ldap-connector
   
 Verify it works in https://manage.auth0.com/#/connections/enterprise
