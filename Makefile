@@ -35,6 +35,7 @@ fpm: extract npm_verify
 		--rpm-user $(PKGNAME) --rpm-group $(PKGNAME) \
 		--rpm-digest sha256 \
 		--before-install pre-install.sh \
+		--config-files config.json \
 		-n $(PKGNAME) -v $(PKGVER) -C target
 
 npm_download: extract
