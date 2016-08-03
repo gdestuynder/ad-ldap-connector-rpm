@@ -8,6 +8,8 @@ WorkingDirectory=/opt/ad-ldap-connector
 Restart=always
 User=ad-ldap-connector
 StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=ad-ldap-connector
 
 [Install]
 WantedBy=multi-user.target
