@@ -13,7 +13,7 @@
 #This is the ad-ldap-connector version
 PKGVER:=2.28.0
 #This is the packaging sub-release version
-PKGREL:=2
+PKGREL:=3
 PKGNAME:=ad-ldap-connector
 PKGPATH:=https://github.com/auth0/ad-ldap-connector/archive/
 PKGSHA256:=8a5fb7582737386000885a1d210632dc8a6fa0104e1d5f5efa5d1c69010ce4dc
@@ -39,8 +39,7 @@ fpm: extract npm_verify
 		--rpm-user $(PKGNAME) --rpm-group $(PKGNAME) \
 		--rpm-digest sha256 \
 		--before-install pre-install.sh \
-		--config-files config.json \
-		--config-files environ \
+		--config-files opt/$(PKGNAME)/environ \
 		--iteration $(PKGREL) \
 		-n $(PKGNAME) -v $(PKGVER) -C target
 
