@@ -1,5 +1,5 @@
 #@maintainer kang@mozilla.com
-#@update 2016-10-28
+#@update 2017-02-06
 
 # Required RPM packaes:
 # fpm
@@ -10,12 +10,12 @@
 #If you change the PKGVER ensure the module list in npm_modules.sha256sum is accurate
 
 #This is the ad-ldap-connector version
-PKGVER:= 3.0.2
+PKGVER:= 3.3.0-mozilla
 #This is the packaging sub-release version
 PKGREL:= 1
 PKGNAME:=ad-ldap-connector
-PKGPATH:=https://github.com/auth0/ad-ldap-connector/archive/
-PKGSHA256:=0d1caf1cacd689e8ace4837dd61757117defab8e68ab484cc7b691c2cfb9b455
+PKGPATH:=https://github.com/mozilla-iam/ad-ldap-connector/archive/
+PKGSHA256:=91855ca55ba3893af9cda28ac37c68200d7d7c269a74c5e542bdf1b997e72781
 NPMS=npm_modules.sha256sum
 
 PKGTARBALL:=v$(PKGVER).tar.gz
