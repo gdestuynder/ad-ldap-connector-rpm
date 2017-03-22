@@ -10,12 +10,12 @@
 #If you change the PKGVER ensure the module list in npm_modules.sha256sum is accurate
 
 #This is the ad-ldap-connector version
-PKGVER:= 3.3.1-mozilla
+PKGVER:= 3.3.3-mozilla
 #This is the packaging sub-release version
 PKGREL:= 1
 PKGNAME:=ad-ldap-connector
 PKGPATH:=https://github.com/gdestuynder/ad-ldap-connector/archive/
-PKGSHA256:=042cca032d26ed54ea18306e45c6ea9f2b88391c64ca8fede888b46c36af67b3
+PKGSHA256:=73ddfadc1a4e564e19b57470297701e9d819276257f2f0f85a50830fd4218c19
 NPMS=npm_modules.sha256sum
 
 PKGTARBALL:=v$(PKGVER).tar.gz
